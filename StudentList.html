@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="flex">
+        <div class="side"></div>
+        <div class="header">
+            <h1>Система управления студентами и их успеваемостью</h1>
+        </div>
+        <div class="side margin-top-auto">
+            <div class="rigth-side">
+                <a href="">Login</a>
+                <br>
+                <br>
+                <a href="">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex margin-top">
+        <div class="side">
+            <div class=" backToStart">
+                <a href="TitilePage.html">На главную</a>
+            </div>
+        </div>
+
+        <div class="midle-place">
+            <div class="flex">
+                <a href="StudentProgress.html" class="button">Посмотреть успеваемость выбранных студентов</a>
+                <a href="StudentCreating.html" class="button">Создать студента...</a>
+            </div>
+
+            <div class="flex">
+                <a href="StudentModifying.html" class="button">Модифицировать выбранного студента</a>
+                <a href="#" class="button">Удалить выбранных студентов</a>
+            </div>
+        </div>
+        <div class="side"></div>
+    </div>
+
+    <div class="margin-left">
+        <h2>
+            Список студентов
+        </h2>
+    </div>
+
+
+    <div class="flex">
+        <div class="side"></div>
+        <div class="midle-place">
+            <form method="get">
+                <table>
+                    <thead class="thead">
+                        <tr>
+                            <th></th>
+                            <th>Фамилия</th>
+                            <th>Имя</th>
+                            <th>Группа</th>
+                            <th>Дата поступления</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach items="${students}" var="student">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>${student.surname}</td>
+                                <td>${student.name}</td>
+                                <td>${student.group}</td>
+                                <td>
+                                    <f:formatDate value="${student.date}" pattern="dd/MM/yyyy" />
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="side"></div>
+    </div>
+
+    <!-- <div class="flex">
+        <div class="side"></div>
+        <div class="midle-place">
+            <form method="get">
+                <table>
+                    <thead class="thead">
+                        <tr>
+                            <th></th>
+                            <th>Фамилия</th>
+                            <th>Имя</th>
+                            <th>Группа</th>
+                            <th>Дата поступления</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Сидоров</td>
+                            <td>Сидор</td>
+                            <td>КТ-21</td>
+                            <td>1/09/2011</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Сидоров</td>
+                            <td>Сидор</td>
+                            <td>КТ-21</td>
+                            <td>1/09/2011</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Сидоров</td>
+                            <td>Сидор</td>
+                            <td>КТ-21</td>
+                            <td>1/09/2011</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Сидоров</td>
+                            <td>Сидор</td>
+                            <td>КТ-21</td>
+                            <td>1/09/2011</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>Сидоров</td>
+                            <td>Сидор</td>
+                            <td>КТ-21</td>
+                            <td>1/09/2011</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+        <div class="side"></div>
+    </div> -->
+
+
+
+
+</body>
+
+</html>
